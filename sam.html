@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+
+
+/* Bordered form */
+form {
+    background-color: rgb(231, 250, 252);
+    width: 50%;
+    align-items: center;
+    margin: 80px 0;
+  border: 3px solid #9da3f3;
+}
+
+/* Full-width inputs */
+input[type=text], input[type=password] {
+  width: 25%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+}
+
+/* Set a style for all buttons */
+input[type=button] {
+  background-color: #4CAF50;
+  color: white;
+  padding: 10px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 15%;
+}
+
+/* Add a hover effect for buttons */
+button:hover {
+  opacity: 0.8;
+}
+
+
+
+/* Center the avatar image inside this container */
+.imgcontainer {
+  text-align: center;
+  margin: 24px 0 12px 0;
+}
+
+
+/* Add padding to containers */
+.container {
+  padding: 16px;
+}
+
+/* The "Forgot password" text */
+span.psw {
+  float: right;
+  padding-top: 16px;
+}
+
+/* Change styles for span and cancel button on extra small screens */
+@media screen and (max-width: 300px) {
+  span.psw {
+    display: block;
+    float: none;
+  }
+  .cancelbtn {
+    width: 100%;
+  }
+}
+
+
+</style>
+<link rel="manifest" href="./manifest.json">
+</head>
+<body>
+    <center>
+    <form method="post">
+
+<h2 align = "center">Lab 9</h2>
+
+
+<div class="container">
+    <label for="uname"><b>Username</b></label>
+    <input type="text" id = "uname" placeholder="Enter Username" name="uname" required><br><br>
+
+    
+
+    <input type ="button" id="fetch_user" value="Submit"/>
+    
+  </div>
+  <div id="profilecard">
+		<img id="gitImg" style="width:300px; margin-top: 10px;">
+		<h4 id="gitName"></h4>
+		<p id="gitBio"></p>
+		<p class="center-align" id="gitRepo"></p>
+		<p id="gitLoc"></p>
+	</div>
+  
+</center>
+
+
+</form>
+<script>
+  if('serviceWorker' in navigator){
+      try{
+          navigator.serviceWorker.register('sw.js')
+              .then(registration => {
+                  console.log('service worker registered');
+          })
+      }
+      catch (err){
+          console.log(err);
+      }
+  }    
+</script>
+
+<script src="main.js"></script>
+
+
+
+</body>
+</html>
+s
