@@ -1,0 +1,29 @@
+<html lang="en">
+<head>
+    
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>PWA Tutorial</title>
+    
+</head>
+<body>
+    <h1>Home Page</h1>
+    <img src="iron_man.png"/>
+    <a href = "post1.html">Navigate</a>
+    <script>
+        if('serviceWorker' in navigator){
+            window.addEventListener('load', ()=>{
+             navigator.serviceWorker.register('service-worker.js')
+             .then(registration => {
+                 console.log('service worker is registered')
+             })
+             .catch(err=>{
+                 console.log('Registration Failed', err)
+             })
+         })   
+        }
+        
+    </script>
+    </body>
+</html>
